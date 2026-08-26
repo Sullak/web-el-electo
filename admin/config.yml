@@ -1,0 +1,51 @@
+backend:
+  name: git-gateway
+  branch: main
+
+locale: es
+
+media_folder: "images"
+public_folder: "/images"
+
+collections:
+  - name: "articulos"
+    label: "Artículos"
+    label_singular: "Artículo"
+    folder: "articulos"
+    create: true
+    delete: true
+    slug: "{{slug}}"
+    fields:
+      - label: "Título"
+        name: "title"
+        widget: "string"
+      - label: "Descripción corta (aparece en la tarjeta del listado)"
+        name: "description"
+        widget: "string"
+      - label: "Subtítulo / lead (debajo del título en el artículo)"
+        name: "lead"
+        widget: "string"
+        required: false
+      - label: "Párrafo de apertura (texto introductorio destacado)"
+        name: "intro"
+        widget: "text"
+        required: false
+      - label: "Categoría"
+        name: "categoria"
+        widget: "select"
+        options:
+          - "Historia Política"
+          - "Economía"
+          - "Democracia"
+          - "Historia Militar"
+          - "Constitución"
+          - "Independencia"
+      - label: "Fecha de publicación"
+        name: "date"
+        widget: "datetime"
+        date_format: "YYYY-MM-DD"
+        time_format: false
+        format: "YYYY-MM-DD"
+      - label: "Contenido"
+        name: "body"
+        widget: "markdown"

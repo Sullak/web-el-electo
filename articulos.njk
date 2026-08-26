@@ -1,0 +1,128 @@
+---
+permalink: /articulos.html
+---
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Artículos — Historia política y económica del Paraguay | El Electo</title>
+  <meta name="description" content="Artículos e investigaciones sobre la historia política, económica e institucional del Paraguay. Análisis del gobierno de Stroessner, Itaipú, la democracia paraguaya y más.">
+  <meta name="keywords" content="historia Paraguay, Stroessner dictadura, Itaipú Paraguay, democracia paraguaya, gobierno Paraguay, artículos historia paraguaya">
+  <link rel="canonical" href="https://www.elelecto.com.py/articulos.html">
+  <link rel="stylesheet" href="/css/style.css">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "CollectionPage",
+    "name": "Artículos — El Electo",
+    "description": "Centro de documentación sobre la historia política, económica e institucional del Paraguay",
+    "url": "https://www.elelecto.com.py/articulos.html",
+    "author": { "@type": "Person", "name": "Rubén Sahid Jure Yunis" }
+  }
+  </script>
+</head>
+<body>
+
+<nav class="navbar" id="navbar">
+  <a href="/" class="navbar-brand">EL <span>ELECTO</span></a>
+  <button class="nav-toggle" id="navToggle" aria-label="Abrir menú"><span></span><span></span><span></span></button>
+  <ul class="nav-links" id="navLinks">
+    <li><a href="/">Inicio</a></li>
+    <li><a href="/el-libro.html">El Libro</a></li>
+    <li><a href="/el-autor.html">El Autor</a></li>
+    <li><a href="/articulos.html" class="active">Artículos</a></li>
+    <li><a href="/cronologia.html">Cronología</a></li>
+    <li><a href="/contacto.html">Contacto</a></li>
+    <li><a href="/comprar.html" class="btn-comprar">Comprar</a></li>
+  </ul>
+</nav>
+
+<header class="page-header">
+  <div class="container">
+    <h1>Artículos e investigaciones</h1>
+    <p class="page-lead">Documentación sobre la historia política, económica e institucional del Paraguay</p>
+    <p class="breadcrumb"><a href="/">Inicio</a> › Artículos</p>
+  </div>
+</header>
+
+<section class="section section-alt">
+  <div class="container">
+
+    <div class="search-bar">
+      <input type="text" id="articleSearch" placeholder="Buscar artículos... (ej: Itaipú, Stroessner, 1954)">
+      <button type="button" aria-label="Buscar">🔍</button>
+    </div>
+
+    <div class="articles-grid">
+      {% for articulo in collections.articulos | reverse %}
+      <div class="article-card card-animate">
+        <div class="article-card-top">
+          <span class="article-tag">{{ articulo.data.categoria }}</span>
+          <h3>{{ articulo.data.title }}</h3>
+        </div>
+        <div class="article-card-body">
+          <p>{{ articulo.data.description }}</p>
+          <a href="{{ articulo.url }}" class="article-read-more">Leer artículo</a>
+        </div>
+      </div>
+      {% endfor %}
+    </div>
+
+    <div style="max-width:700px; margin:4rem auto 0; text-align:center;">
+      <div class="alert alert-info">
+        <span>📚</span>
+        <span>Todos los artículos están basados en la investigación documental presentada en el libro <strong>El Electo: El Progreso Silenciado</strong> de Rubén Sahid Jure Yunis.</span>
+      </div>
+      <a href="/el-libro.html" class="btn btn-dark" style="margin-top:1rem;">Conocer el libro completo</a>
+    </div>
+
+  </div>
+</section>
+
+<footer class="footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div>
+        <div class="footer-brand">EL <span>ELECTO</span></div>
+        <p class="footer-desc">Centro de documentación sobre la historia política, económica e institucional del Paraguay.</p>
+        <div class="social-links">
+          <a href="#" class="social-link">▶</a>
+          <a href="#" class="social-link">♪</a>
+          <a href="#" class="social-link">f</a>
+        </div>
+      </div>
+      <div>
+        <h4 class="footer-col-title">El Libro</h4>
+        <ul class="footer-links">
+          <li><a href="/el-libro.html">Descripción</a></li>
+          <li><a href="/el-libro.html#indice">Índice</a></li>
+          <li><a href="/comprar.html">Comprar</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4 class="footer-col-title">Explorar</h4>
+        <ul class="footer-links">
+          <li><a href="/articulos.html">Artículos</a></li>
+          <li><a href="/cronologia.html">Cronología</a></li>
+          <li><a href="/el-autor.html">El Autor</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4 class="footer-col-title">Contacto</h4>
+        <ul class="footer-links">
+          <li><a href="mailto:info@elelecto.com.py">info@elelecto.com.py</a></li>
+          <li><a href="/comprar.html">Hacer un pedido</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2025 Rubén Sahid Jure Yunis · Todos los derechos reservados</p>
+      <p>Encarnación, Paraguay</p>
+    </div>
+  </div>
+</footer>
+
+<script src="/js/main.js"></script>
+</body>
+</html>

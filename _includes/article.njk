@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>{{ title }} — El Electo</title>
+  <meta name="description" content="{{ description }}">
+  <link rel="canonical" href="https://www.elelecto.com.py/articulos/{{ page.fileSlug }}.html">
+  <link rel="stylesheet" href="/css/style.css">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": "{{ title }}",
+    "author": { "@type": "Person", "name": "Rubén Sahid Jure Yunis" },
+    "datePublished": "{{ date }}",
+    "inLanguage": "es",
+    "isPartOf": { "@type": "Book", "name": "El Electo: El Progreso Silenciado", "isbn": "978-99989-1-519-0" },
+    "url": "https://www.elelecto.com.py/articulos/{{ page.fileSlug }}.html",
+    "description": "{{ description }}"
+  }
+  </script>
+  <style>
+    .article-body blockquote {
+      border-left: 4px solid var(--orange);
+      background: var(--cream);
+      margin: 2rem 0;
+      padding: 1.5rem 1.5rem 1.5rem 2rem;
+      border-radius: 0 var(--radius) var(--radius) 0;
+      font-style: italic;
+      color: var(--brown-dark);
+    }
+    .article-body blockquote p { margin-bottom: 0.5rem; }
+    .article-body blockquote p:last-child { margin-bottom: 0; font-size: 0.85rem; color: #888; font-style: normal; }
+    .article-body h2 { margin: 2.5rem 0 1rem; }
+    .article-body h3 { margin: 2rem 0 0.75rem; }
+    .article-body p { margin-bottom: 1.2rem; line-height: 1.8; }
+  </style>
+</head>
+<body>
+
+<nav class="navbar" id="navbar">
+  <a href="/" class="navbar-brand">EL <span>ELECTO</span></a>
+  <button class="nav-toggle" id="navToggle" aria-label="Abrir menú"><span></span><span></span><span></span></button>
+  <ul class="nav-links" id="navLinks">
+    <li><a href="/">Inicio</a></li>
+    <li><a href="/el-libro.html">El Libro</a></li>
+    <li><a href="/el-autor.html">El Autor</a></li>
+    <li><a href="/articulos.html" class="active">Artículos</a></li>
+    <li><a href="/cronologia.html">Cronología</a></li>
+    <li><a href="/contacto.html">Contacto</a></li>
+    <li><a href="/comprar.html" class="btn-comprar">Comprar</a></li>
+  </ul>
+</nav>
+
+<header class="page-header">
+  <div class="container">
+    <span style="display:inline-block; padding:0.2rem 0.7rem; background:var(--orange); color:#fff; border-radius:20px; font-size:0.72rem; font-weight:700; text-transform:uppercase; letter-spacing:1px; margin-bottom:1rem;">{{ categoria }}</span>
+    <h1 style="font-size:clamp(1.6rem,4vw,2.8rem);">{{ title }}</h1>
+    {% if lead %}<p class="page-lead">{{ lead }}</p>{% endif %}
+    <p class="breadcrumb"><a href="/">Inicio</a> › <a href="/articulos.html">Artículos</a> › Este artículo</p>
+  </div>
+</header>
+
+<article class="section section-alt">
+  <div class="container" style="max-width:780px;">
+
+    <div style="font-size:0.82rem; color:#888; margin-bottom:2rem; padding-bottom:1.5rem; border-bottom:1px solid var(--cream-dark);">
+      Por <strong style="color:var(--brown-dark);">Rubén Sahid Jure Yunis</strong> · Extracto de <em>El Electo: El Progreso Silenciado</em> (2025)
+    </div>
+
+    {% if intro %}
+    <p style="font-size:1.1rem; font-weight:500; color:var(--brown-dark); line-height:1.7; margin-bottom:2rem;">
+      {{ intro }}
+    </p>
+    {% endif %}
+
+    <div class="article-body">
+      {{ content | safe }}
+    </div>
+
+    <div style="background:var(--cream); border:2px solid var(--cream-dark); border-radius:var(--radius); padding:2rem; margin:2.5rem 0;">
+      <h3 style="font-size:1rem; margin-bottom:0.75rem; color:var(--brown-dark);">Este artículo es parte del libro</h3>
+      <p style="font-size:0.9rem; margin-bottom:1rem;">
+        <em>El Electo: El Progreso Silenciado</em> desarrolla en más de 460 páginas el análisis
+        completo del período de Stroessner, con documentos, datos económicos, relaciones
+        internacionales y testimonios de época.
+      </p>
+      <a href="/comprar.html" class="btn btn-primary btn-sm">Pedir el libro</a>
+      <a href="/el-libro.html" class="btn btn-dark btn-sm" style="margin-left:0.75rem;">Ver índice completo</a>
+    </div>
+
+  </div>
+</article>
+
+<section class="comments-section" id="comentarios">
+  <div class="container" style="max-width:780px;">
+    <div class="comments-header">
+      <h2>Comentarios y debate</h2>
+      <p>Se valora el debate respetuoso y fundamentado. Los comentarios son revisados antes de publicarse.</p>
+      <span class="comments-moderation-note">
+        Moderación activa — los comentarios aparecen luego de aprobación del autor
+      </span>
+    </div>
+    <div id="disqus_thread"></div>
+    <script>
+      var disqus_config = function () {
+        this.page.url = 'https://www.elelecto.com.py/articulos/{{ page.fileSlug }}.html';
+        this.page.identifier = 'articulo-{{ page.fileSlug }}';
+      };
+      (function() {
+        var d = document, s = d.createElement('script');
+        s.src = 'https://el-electo.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+      })();
+    </script>
+    <noscript>
+      <p style="color:#888; font-size:0.9rem; text-align:center;">
+        Habilitá JavaScript para ver los comentarios.
+      </p>
+    </noscript>
+  </div>
+</section>
+
+<footer class="footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div>
+        <div class="footer-brand">EL <span>ELECTO</span></div>
+        <p class="footer-desc">Centro de documentación sobre la historia política, económica e institucional del Paraguay.</p>
+        <div class="social-links">
+          <a href="#" class="social-link">▶</a>
+          <a href="#" class="social-link">♪</a>
+          <a href="#" class="social-link">f</a>
+        </div>
+      </div>
+      <div>
+        <h4 class="footer-col-title">El Libro</h4>
+        <ul class="footer-links">
+          <li><a href="/el-libro.html">Descripción</a></li>
+          <li><a href="/comprar.html">Comprar</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4 class="footer-col-title">Explorar</h4>
+        <ul class="footer-links">
+          <li><a href="/articulos.html">Artículos</a></li>
+          <li><a href="/cronologia.html">Cronología</a></li>
+          <li><a href="/el-autor.html">El Autor</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4 class="footer-col-title">Contacto</h4>
+        <ul class="footer-links">
+          <li><a href="mailto:info@elelecto.com.py">info@elelecto.com.py</a></li>
+          <li><a href="/comprar.html">Hacer un pedido</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2025 Rubén Sahid Jure Yunis · Todos los derechos reservados</p>
+      <p>Encarnación, Paraguay</p>
+    </div>
+  </div>
+</footer>
+
+<script src="/js/main.js"></script>
+</body>
+</html>
