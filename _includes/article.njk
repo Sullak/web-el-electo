@@ -65,9 +65,11 @@
 <article class="section section-alt">
   <div class="container" style="max-width:780px;">
 
-    <div style="font-size:0.82rem; color:#888; margin-bottom:2rem; padding-bottom:1.5rem; border-bottom:1px solid var(--cream-dark);">
-      Por <strong style="color:var(--brown-dark);">Rubén Sahid Jure Yunis</strong> · Extracto de <em>El Electo: El Progreso Silenciado</em> (2025)
-    </div>
+    {% if autor %}
+        <div style="font-size:0.82rem; color:#888; margin-bottom:2rem; padding-bottom:1.5rem; border-bottom:1px solid var(--cream-dark);">
+          Por <strong style="color:var(--brown-dark);">{{ autor }}</strong>
+        </div>
+        {% endif %}
 
     {% if intro %}
     <p style="font-size:1.1rem; font-weight:500; color:var(--brown-dark); line-height:1.7; margin-bottom:2rem;">
