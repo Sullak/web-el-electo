@@ -14,14 +14,13 @@ intro: El debate sobre la naturaleza del gobierno del General Alfredo Stroessner
 categoria: Historia Política, Stroessner
 date: 2025-01-01
 ---
-
 ## ¿Qué es una dictadura? Definición conceptual
 
 En su sentido estricto, el término *dictadura* proviene de la institución romana de la *dictatura*: un poder extraordinario, temporal y concentrado, otorgado en situaciones de emergencia y limitado en el tiempo. En la política moderna, el concepto ha evolucionado para designar regímenes de poder unipersonal o de partido único que suprimen completamente toda forma de participación política, oposición legal y competencia electoral.
 
 Una dictadura en sentido estricto implica: ausencia total de elecciones o elecciones completamente fraudulentas sin competencia alguna, prohibición de todos los partidos políticos, concentración absoluta del poder sin ningún contrapeso institucional, y supresión total del ordenamiento jurídico previo.
 
-## El caso de Stroessner: un gobierno autoritario electo
+## El caso de Stroessner: un gobierno asaz fuerte (demasiado fuerte)
 
 El gobierno de Alfredo Stroessner presentaba características que lo diferencian de una dictadura en sentido estricto. Stroessner fue **electo** en elecciones, aunque en un contexto de competencia restringida. Varios partidos políticos operaban legalmente, incluyendo el Partido Liberal y el Partido Febrerista, aunque en condiciones de clara desigualdad frente al Partido Colorado.
 
