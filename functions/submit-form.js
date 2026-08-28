@@ -19,7 +19,7 @@ export async function onRequestPost(context) {
       method: 'POST',
       headers: {
         'Authorization': `Bearer ${context.env.RESEND_API_KEY}`,
-        'Content-Type': 'json'
+        'Content-Type': 'application/json'
       },
       body: JSON.stringify({
         from: 'Web El Electo <onboarding@resend.dev>',

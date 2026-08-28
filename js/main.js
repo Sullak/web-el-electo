@@ -83,24 +83,27 @@ document.addEventListener('DOMContentLoaded', () => {
       msg += `📝 Tipo: ${tipoLabel[tipo] || tipo}`;
       if (tipo === 'dedicatoria' && dedicatoria) msg += `\n✍️ Dedicatoria: "${dedicatoria}"`;
 
-      // Número de WhatsApp del autor (configurar aquí)
       const WA_NUMBER = '595974202326';
       const waUrl = `https://wa.me/${WA_NUMBER}?text=${encodeURIComponent(msg)}`;
 
-      // Envío a Netlify Forms
       const formData = new FormData(purchaseForm);
-      fetch('/', {
+      fetch('/submit-form', {
         method: 'POST',
-        headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
-        body: new URLSearchParams(formData).toString()
-      }).catch(() => {});
-
-      // Mostrar éxito y abrir WhatsApp
-      purchaseForm.style.display = 'none';
-      const successMsg = document.getElementById('form-success');
-      if (successMsg) successMsg.style.display = 'flex';
-
-      setTimeout(() => { window.open(waUrl, '_blank'); }, 1200);
+        body: formData
+      })
+      .then(response => {
+        if (response.ok) {
+          purchaseForm.style.display = 'none';
+          const successMsg = document.getElementById('form-success');
+          if (successMsg) successMsg.style.display = 'flex';
+          setTimeout(() => { window.open(waUrl, '_blank'); }, 1200);
+        } else {
+          alert('Hubo un error al enviar el pedido. Por favor, intentá de nuevo.');
+        }
+      })
+      .catch(() => {
+        alert('Hubo un error al enviar el pedido. Por favor, intentá de nuevo.');
+      });
     });
   }
 
@@ -110,20 +113,21 @@ document.addEventListener('DOMContentLoaded', () => {
     contactForm.addEventListener('submit', function(e) {
       e.preventDefault();
       const formData = new FormData(contactForm);
-      fetch('/', {
+      fetch('/submit-form', {
         method: 'POST',
-        headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
-        body: new URLSearchParams(formData).toString()
+        body: formData
       })
-      .then(() => {
-        contactForm.style.display = 'none';
-        const ok = document.getElementById('contact-success');
-        if (ok) ok.style.display = 'flex';
+      .then(response => {
+        if (response.ok) {
+          contactForm.style.display = 'none';
+          const ok = document.getElementById('contact-success');
+          if (ok) ok.style.display = 'flex';
+        } else {
+          alert('Hubo un error al enviar el mensaje. Por favor, intentá de nuevo.');
+        }
       })
       .catch(() => {
-        const ok = document.getElementById('contact-success');
-        if (ok) ok.style.display = 'flex';
-        contactForm.style.display = 'none';
+        alert('Hubo un error al enviar el mensaje. Por favor, intentá de nuevo.');
       });
     });
   }
