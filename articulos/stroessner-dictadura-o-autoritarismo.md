@@ -22,7 +22,7 @@ Una dictadura en sentido estricto implica: ausencia total de elecciones o elecci
 
 ## El caso de Stroessner: un gobierno asaz fuerte (demasiado fuerte)
 
-El gobierno de Alfredo Stroessner presentaba características que lo diferencian de una dictadura en sentido estricto. Stroessner fue **electo** en elecciones, aunque en un contexto de competencia restringida. Varios partidos políticos operaban legalmente, incluyendo el Partido Liberal y el Partido Febrerista, aunque en condiciones de clara desigualdad frente al Partido Colorado.
+El gobierno de Alfredo Stroessner presentaba características que lo diferencian de una dictadura en sentido estricto. Stroessner fue **electo** en elecciones, conforme a la constitución y las leyes, por el pueblo. Incluso, fue el primer presidente electo de esa forma, varias veces. Varios partidos políticos operaban legalmente, incluyendo el Partido Liberal y el Partido Febrerista, aunque en condiciones de clara desigualdad frente al Partido Colorado.
 
 El Paraguay mantuvo durante ese período una Constitución vigente —la de 1940, luego reemplazada por la de 1967—, un Poder Judicial formalmente activo, y relaciones diplomáticas normales con la comunidad internacional. El país era reconocido por todas las naciones democráticas del mundo y participaba activamente en organismos internacionales.
 
