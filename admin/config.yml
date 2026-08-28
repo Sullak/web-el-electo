@@ -1,6 +1,9 @@
 backend:
-  name: git-gateway
+  name: github
+  repo: Sullak/web-el-electo
   branch: main
+  base_url: https://web-el-electo.pages.dev
+  auth_endpoint: /auth
 
 locale: es
 
