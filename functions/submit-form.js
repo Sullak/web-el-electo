@@ -23,7 +23,7 @@ export async function onRequestPost(context) {
       },
       body: JSON.stringify({
         from: 'Web El Electo <onboarding@resend.dev>',
-        to: ['victor.kallus@gmail.com', 'jureruben@gmail.com'], // <-- Reemplaza por tu correo
+        to: ['victor.kallus@gmail.com'],
         subject: `Nuevo mensaje de web El Electo: ${formName}`,
         text: contenido
       })
