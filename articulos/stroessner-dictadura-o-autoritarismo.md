@@ -11,7 +11,7 @@ intro: El debate sobre la naturaleza del gobierno del General Alfredo Stroessner
   latinoamericana. Calificarlo de "dictadura" se ha convertido en una afirmación
   casi automática. Pero ¿es esa la categoría correcta desde el punto de vista
   histórico y político?
-categoria: Historia Política
+categoria: Historia Política, Stroessner
 date: 2025-01-01
 ---
 
