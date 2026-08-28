@@ -1,8 +1,10 @@
 ---
 title: Artículo de Prueba
-description: breve resumen de lo que trata el artículo
+autor: anonimo
+description: breve resumen de lo que trata el artículo. <br> no puedo darle
+  enter a este campo de texto.
 lead: subtitulo que estoy probando
-intro: ""
+intro: este es un parrafo introductorio que estoy probando para saber donde figura.
 categoria: Historia Política
 date: 2026-08-27
 ---
