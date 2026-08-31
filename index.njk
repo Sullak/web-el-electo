@@ -1,3 +1,6 @@
+---
+permalink: /index.html
+---
 <!DOCTYPE html>
 <html lang="es">
 <head>
@@ -14,8 +17,7 @@
   <meta property="og:image" content="https://www.elelecto.com.py/tapa_el_electo.jpeg">
   <meta property="og:url" content="https://www.elelecto.com.py/">
   <meta property="og:type" content="book">
-  <link rel="stylesheet" href="css/style.css">
-  <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
+  <link rel="stylesheet" href="/css/style.css">
   <!-- Schema.org Libro -->
   <script type="application/ld+json">
   {
@@ -48,18 +50,18 @@
 
 <!-- NAVBAR -->
 <nav class="navbar" id="navbar">
-  <a href="index.html" class="navbar-brand">EL <span>ELECTO</span></a>
+  <a href="/" class="navbar-brand">EL <span>ELECTO</span></a>
   <button class="nav-toggle" id="navToggle" aria-label="Abrir menú">
     <span></span><span></span><span></span>
   </button>
   <ul class="nav-links" id="navLinks">
-    <li><a href="index.html" class="active">Inicio</a></li>
-    <li><a href="el-libro.html">El Libro</a></li>
-    <li><a href="el-autor.html">El Autor</a></li>
-    <li><a href="articulos.html">Artículos</a></li>
-    <li><a href="cronologia.html">Cronología</a></li>
-    <li><a href="contacto.html">Contacto</a></li>
-    <li><a href="comprar.html" class="btn-comprar">Comprar</a></li>
+    <li><a href="/" class="active">Inicio</a></li>
+    <li><a href="/el-libro.html">El Libro</a></li>
+    <li><a href="/el-autor.html">El Autor</a></li>
+    <li><a href="/articulos.html">Artículos</a></li>
+    <li><a href="/cronologia.html">Cronología</a></li>
+    <li><a href="/contacto.html">Contacto</a></li>
+    <li><a href="/comprar.html" class="btn-comprar">Comprar</a></li>
   </ul>
 </nav>
 
@@ -78,13 +80,13 @@
         </p>
         <p class="hero-isbn">ISBN 978-99989-1-519-0 · 460 páginas · Impreso en Paraguay</p>
         <div class="hero-buttons">
-          <a href="el-libro.html" class="btn btn-primary">Conocer el libro</a>
-          <a href="articulos.html" class="btn btn-outline">Leer artículos</a>
+          <a href="/el-libro.html" class="btn btn-primary">Conocer el libro</a>
+          <a href="/articulos.html" class="btn btn-outline">Leer artículos</a>
         </div>
       </div>
       <div class="hero-book">
-        <a href="el-libro.html">
-          <img src="tapa_el_electo.jpeg" alt="Portada del libro El Electo — El Progreso Silenciado de Rubén Sahid Jure Yunis" class="book-cover-3d">
+        <a href="/el-libro.html">
+          <img src="/tapa_el_electo.jpeg" alt="Portada del libro El Electo — El Progreso Silenciado de Rubén Sahid Jure Yunis" class="book-cover-3d">
         </a>
       </div>
     </div>
@@ -138,7 +140,7 @@
     <div style="display:grid; grid-template-columns: 320px 1fr; gap: 4rem; align-items: center;">
       <div style="position: relative;">
         <div style="position: relative; z-index: 1;">
-          <img src="Ruben_Jure_uniforme_bombero.png"
+          <img src="/Ruben_Jure_uniforme_bombero.png"
                alt="Rubén Sahid Jure Yunis, Brigadier General de Bomberos Voluntarios, escritor e investigador paraguayo"
                style="width:100%; border-radius:4px; box-shadow:8px 8px 30px rgba(60,20,5,0.2);">
         </div>
@@ -160,8 +162,8 @@
           <em>El Electo</em> es su obra de investigación más ambiciosa, fruto de años de trabajo riguroso.
         </p>
         <div style="display:flex; gap:1rem; flex-wrap:wrap; margin-top:1.75rem;">
-          <a href="el-autor.html" class="btn btn-dark">Leer biografía completa</a>
-          <a href="comprar.html" class="btn btn-primary">Pedir el libro</a>
+          <a href="/el-autor.html" class="btn btn-dark">Leer biografía completa</a>
+          <a href="/comprar.html" class="btn btn-primary">Pedir el libro</a>
         </div>
       </div>
     </div>
@@ -178,42 +180,22 @@
     </p>
     <div class="articles-grid">
 
+      {% for articulo in collections.articulos | reverse | limit(3) %}
       <div class="article-card card-animate">
         <div class="article-card-top">
-          <span class="article-tag">Historia Política</span>
-          <h3>¿Fue realmente una dictadura el gobierno de Stroessner?</h3>
+          <span class="article-tag">{{ articulo.data.categoria }}</span>
+          <h3>{{ articulo.data.title }}</h3>
         </div>
         <div class="article-card-body">
-          <p>Un análisis riguroso de los conceptos de dictadura y gobierno autoritario aplicados al período 1954–1989. El autor presenta documentos y hechos históricos que invitan a revisar la narrativa dominante.</p>
-          <a href="articulos/stroessner-dictadura-o-autoritarismo.html" class="article-read-more">Leer artículo</a>
+          <p>{{ articulo.data.description }}</p>
+          <a href="{{ articulo.url }}" class="article-read-more">Leer artículo</a>
         </div>
       </div>
-
-      <div class="article-card card-animate">
-        <div class="article-card-top">
-          <span class="article-tag">Economía</span>
-          <h3>Itaipú y Acaray: el progreso hidroeléctrico silenciado</h3>
-        </div>
-        <div class="article-card-body">
-          <p>La construcción de las represas de Itaipú y Acaray transformó radicalmente la economía paraguaya. Un repaso de los datos económicos que revelan un progreso infraestructural sin precedentes en la historia del país.</p>
-          <a href="articulos/itaipu-acaray-progreso.html" class="article-read-more">Leer artículo</a>
-        </div>
-      </div>
-
-      <div class="article-card card-animate">
-        <div class="article-card-top">
-          <span class="article-tag">Democracia</span>
-          <h3>Itinerario democrático del Paraguay: 1870–1989</h3>
-        </div>
-        <div class="article-card-body">
-          <p>Desde la Constitución de 1870 hasta el fin del gobierno de Stroessner, el Paraguay tuvo una historia democrática más compleja de lo que habitualmente se enseña. Un recorrido documentado por las elecciones y los cambios de poder.</p>
-          <a href="articulos/itinerario-democratico-paraguay.html" class="article-read-more">Leer artículo</a>
-        </div>
-      </div>
+      {% endfor %}
 
     </div>
     <div class="text-center mt-2">
-      <a href="articulos.html" class="btn btn-dark">Ver todos los artículos</a>
+      <a href="/articulos.html" class="btn btn-dark">Ver todos los artículos</a>
     </div>
   </div>
 </section>
@@ -254,7 +236,7 @@
       </div>
     </div>
     <div class="text-center">
-      <a href="cronologia.html" class="btn btn-primary">Ver cronología completa</a>
+      <a href="/cronologia.html" class="btn btn-primary">Ver cronología completa</a>
     </div>
   </div>
 </section>
@@ -262,15 +244,15 @@
 <!-- CTA COMPRA -->
 <section class="section section-alt">
   <div class="container" style="max-width:700px; text-align:center;">
-    <img src="tapa_el_electo.jpeg" alt="Portada El Electo" style="width:160px; margin:0 auto 2rem; border-radius:4px; box-shadow:6px 6px 25px rgba(60,20,5,0.2);">
+    <img src="/tapa_el_electo.jpeg" alt="Portada El Electo" style="width:160px; margin:0 auto 2rem; border-radius:4px; box-shadow:6px 6px 25px rgba(60,20,5,0.2);">
     <h2>Adquirí tu ejemplar</h2>
     <p style="margin-top:1rem; font-size:1.05rem; color:var(--text-body);">
       El libro está disponible con o sin dedicatoria personalizada del autor.
       Realizá tu pedido de forma simple: recibimos tu solicitud y coordinamos la entrega directamente con vos.
     </p>
     <div style="display:flex; gap:1rem; justify-content:center; flex-wrap:wrap; margin-top:2rem;">
-      <a href="comprar.html" class="btn btn-primary">Hacer un pedido</a>
-      <a href="contacto.html" class="btn btn-dark">Consultas</a>
+      <a href="/comprar.html" class="btn btn-primary">Hacer un pedido</a>
+      <a href="/contacto.html" class="btn btn-dark">Consultas</a>
     </div>
   </div>
 </section>
@@ -295,27 +277,27 @@
       <div>
         <h4 class="footer-col-title">El Libro</h4>
         <ul class="footer-links">
-          <li><a href="el-libro.html">Descripción</a></li>
-          <li><a href="el-libro.html#indice">Índice</a></li>
-          <li><a href="el-libro.html#prologo">Prólogo</a></li>
-          <li><a href="comprar.html">Comprar</a></li>
+          <li><a href="/el-libro.html">Descripción</a></li>
+          <li><a href="/el-libro.html#indice">Índice</a></li>
+          <li><a href="/el-libro.html#prologo">Prólogo</a></li>
+          <li><a href="/comprar.html">Comprar</a></li>
         </ul>
       </div>
       <div>
         <h4 class="footer-col-title">Explorar</h4>
         <ul class="footer-links">
-          <li><a href="articulos.html">Artículos</a></li>
-          <li><a href="cronologia.html">Cronología</a></li>
-          <li><a href="el-autor.html">El Autor</a></li>
-          <li><a href="contacto.html">Contacto</a></li>
+          <li><a href="/articulos.html">Artículos</a></li>
+          <li><a href="/cronologia.html">Cronología</a></li>
+          <li><a href="/el-autor.html">El Autor</a></li>
+          <li><a href="/contacto.html">Contacto</a></li>
         </ul>
       </div>
       <div>
         <h4 class="footer-col-title">Contacto</h4>
         <ul class="footer-links">
           <li><a href="mailto:info@elelecto.com.py">info@elelecto.com.py</a></li>
-          <li><a href="comprar.html">Hacer un pedido</a></li>
-          <li><a href="contacto.html">Formulario de contacto</a></li>
+          <li><a href="/comprar.html">Hacer un pedido</a></li>
+          <li><a href="/contacto.html">Formulario de contacto</a></li>
         </ul>
       </div>
     </div>
@@ -326,6 +308,6 @@
   </div>
 </footer>
 
-<script src="js/main.js"></script>
+<script src="/js/main.js"></script>
 </body>
 </html>

@@ -10,6 +10,8 @@ module.exports = function(eleventyConfig) {
       .filter(item => item.data.published !== false);
   });
 
+  eleventyConfig.addFilter("limit", (arr, n) => arr.slice(0, n));
+
   eleventyConfig.addPassthroughCopy("*.html");
   eleventyConfig.addPassthroughCopy("css");
   eleventyConfig.addPassthroughCopy("js");
