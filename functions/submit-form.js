@@ -23,7 +23,7 @@ export async function onRequestPost(context) {
       },
       body: JSON.stringify({
         from: 'Web El Electo <onboarding@resend.dev>',
-        to: ['victor.kallus@gmail.com', 'jureruben@gmail.com'], // <-- Reemplaza por tu correo
+        to: ['victor.kallus@gmail.com'],
         subject: `Nuevo mensaje de web El Electo: ${formName}`,
         text: contenido
       })
@@ -34,7 +34,8 @@ export async function onRequestPost(context) {
         headers: { 'Content-Type': 'application/json' }
       });
     } else {
-      return new Response('Error al procesar el envío de correo.', { status: 500 });
+      const errBody = await res.text();
+      return new Response(`Resend error ${res.status}: ${errBody}`, { status: 500 });
     }
   } catch (err) {
     return new Response(err.message, { status: 500 });

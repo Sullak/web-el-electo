@@ -1,7 +1,6 @@
 ---
-title: ¿Fue realmente una dictadura el gobierno de Stroessner o fue un gobierno
-  asaz fuerte?
-autor: Rubén Sahid Jure Yunis
+title: EL mayor logro de la época Stronista
+autor: Rubén Jure
 description: Un análisis riguroso de los conceptos de dictadura y gobierno
   autoritario aplicados al período 1954–1989. El autor presenta documentos y
   hechos históricos que invitan a revisar la narrativa dominante sobre el
@@ -12,7 +11,7 @@ intro: El debate sobre la naturaleza del gobierno del General Alfredo Stroessner
   latinoamericana. Calificarlo de "dictadura" se ha convertido en una afirmación
   casi automática. Pero ¿es esa la categoría correcta desde el punto de vista
   histórico y político?
-categoria: Historia Política, Stroessner
+categoria: Stroessner
 date: 2025-01-01
 ---
 ## ¿Qué es una dictadura? Definición conceptual

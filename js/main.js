@@ -91,18 +91,19 @@ document.addEventListener('DOMContentLoaded', () => {
         method: 'POST',
         body: formData
       })
-      .then(response => {
+      .then(async response => {
         if (response.ok) {
           purchaseForm.style.display = 'none';
           const successMsg = document.getElementById('form-success');
           if (successMsg) successMsg.style.display = 'flex';
           setTimeout(() => { window.open(waUrl, '_blank'); }, 1200);
         } else {
-          alert('Hubo un error al enviar el pedido. Por favor, intentá de nuevo.');
+          const msg = await response.text();
+          alert('Error al enviar el pedido: ' + msg);
         }
       })
-      .catch(() => {
-        alert('Hubo un error al enviar el pedido. Por favor, intentá de nuevo.');
+      .catch(err => {
+        alert('Error al enviar el pedido: ' + err.message);
       });
     });
   }
@@ -117,17 +118,18 @@ document.addEventListener('DOMContentLoaded', () => {
         method: 'POST',
         body: formData
       })
-      .then(response => {
+      .then(async response => {
         if (response.ok) {
           contactForm.style.display = 'none';
           const ok = document.getElementById('contact-success');
           if (ok) ok.style.display = 'flex';
         } else {
-          alert('Hubo un error al enviar el mensaje. Por favor, intentá de nuevo.');
+          const msg = await response.text();
+          alert('Error al enviar el mensaje: ' + msg);
         }
       })
-      .catch(() => {
-        alert('Hubo un error al enviar el mensaje. Por favor, intentá de nuevo.');
+      .catch(err => {
+        alert('Error al enviar el mensaje: ' + err.message);
       });
     });
   }
