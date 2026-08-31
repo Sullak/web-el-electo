@@ -30,6 +30,7 @@ body {
   color: var(--text-body);
   background: var(--cream);
   line-height: 1.7;
+  overflow-x: hidden;
 }
 img { max-width: 100%; height: auto; display: block; }
 a { color: var(--orange); text-decoration: none; transition: color var(--transition); }
@@ -533,6 +534,36 @@ p:last-child { margin-bottom: 0; }
   display: block;
 }
 
+/* === AUTOR INDEX (homepage) === */
+.author-index-layout {
+  display: grid;
+  grid-template-columns: 320px 1fr;
+  gap: 4rem;
+  align-items: center;
+}
+.author-index-photo-wrap {
+  position: relative;
+}
+.author-index-photo {
+  width: 100%;
+  max-width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 4px;
+  box-shadow: 8px 8px 30px rgba(60,20,5,0.2);
+  position: relative;
+  z-index: 1;
+}
+.author-index-photo-border {
+  position: absolute;
+  top: 0; left: 0;
+  width: calc(100% - 16px);
+  height: calc(100% - 16px);
+  border: 3px solid var(--orange);
+  border-radius: 4px;
+  z-index: 0;
+}
+
 /* === AUTOR === */
 .author-layout {
   display: grid;
@@ -936,6 +967,9 @@ select.form-control { cursor: pointer; }
   .author-layout { grid-template-columns: 1fr; }
   .author-sidebar { position: static; max-width: 280px; }
   .author-photo-wrap::before { display: none; }
+  .author-index-layout { grid-template-columns: 1fr; gap: 2rem; }
+  .author-index-photo-wrap { max-width: 280px; margin: 0 auto; }
+  .author-index-photo-border { display: none; }
   .contact-grid { grid-template-columns: 1fr; }
   .form-grid-2 { grid-template-columns: 1fr; }
   .footer-grid { grid-template-columns: 1fr 1fr; }
