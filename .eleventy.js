@@ -3,6 +3,13 @@ module.exports = function(eleventyConfig) {
   // los .html estáticos se copian tal cual (sin renombrar a /carpeta/index.html)
   eleventyConfig.setTemplateFormats(["md", "njk"]);
 
+  // Colección de artículos publicados
+  eleventyConfig.addCollection("articulos", function(collection) {
+    return collection
+      .getFilteredByGlob("articulos/**/*.md")
+      .filter(item => item.data.published !== false);
+  });
+
   eleventyConfig.addPassthroughCopy("*.html");
   eleventyConfig.addPassthroughCopy("css");
   eleventyConfig.addPassthroughCopy("js");

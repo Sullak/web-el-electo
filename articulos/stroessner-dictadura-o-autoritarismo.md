@@ -1,4 +1,6 @@
 ---
+layout: article.njk
+permalink: /articulos/{{ fileSlug }}.html
 title: ¿Fue realmente una dictadura el gobierno de Stroessner?
 autor: Rubén Sahid Jure Yunis
 description: Un análisis riguroso de los conceptos de dictadura y gobierno
