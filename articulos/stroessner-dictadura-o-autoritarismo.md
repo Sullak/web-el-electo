@@ -1,5 +1,6 @@
 ---
-title: ¿Fue realmente una dictadura el gobierno de Stroessner?
+title: ¿Fue realmente una dictadura el gobierno de Stroessner o fue un gobierno
+  asaz fuerte?
 autor: Rubén Sahid Jure Yunis
 description: Un análisis riguroso de los conceptos de dictadura y gobierno
   autoritario aplicados al período 1954–1989. El autor presenta documentos y
