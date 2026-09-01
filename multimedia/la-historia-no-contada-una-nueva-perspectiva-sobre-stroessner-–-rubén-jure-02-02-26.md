@@ -4,9 +4,9 @@ title: " La historia no contada: una nueva perspectiva sobre Stroessner – Rub�
   Jure (02.02.26)"
 medio: Entrevista con Bruno Masi
 tipo: Video (YouTube)
-youtube_id: https://www.youtube.com/watch?v=lzThXqYnQbM
+youtube_id: lzThXqYnQbM
 url: https://www.youtube.com/watch?v=lzThXqYnQbM
-imagen: https://www.youtube.com/watch?v=lzThXqYnQbM
+imagen: https://i.ytimg.com/vi/lzThXqYnQbM/hq720.jpg?sqp=-oaymwEnCNAFEJQDSFryq4qpAxkIARUAAIhCGAHYAQHiAQoIGBACGAY4AUAB&rs=AOn4CLBsEXXZHNvnc2-QYC-6YVliIcPnyQ
 date: 2026-02-02
 description: >-
   Conversamos con Rubén Jure Yunis, autor del libro El electo… El progreso
