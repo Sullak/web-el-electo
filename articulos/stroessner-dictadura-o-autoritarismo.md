@@ -1,6 +1,6 @@
 ---
-title: ¿Fue realmente una dictadura el gobierno de Stroessner o fue un gobierno
-  asaz fuerte?
+published: true
+title: ¿Fue realmente una dictadura el gobierno de Stroessner?
 autor: Rubén Sahid Jure Yunis
 description: Un análisis riguroso de los conceptos de dictadura y gobierno
   autoritario aplicados al período 1954–1989. El autor presenta documentos y
@@ -21,9 +21,9 @@ En su sentido estricto, el término *dictadura* proviene de la institución roma
 
 Una dictadura en sentido estricto implica: ausencia total de elecciones o elecciones completamente fraudulentas sin competencia alguna, prohibición de todos los partidos políticos, concentración absoluta del poder sin ningún contrapeso institucional, y supresión total del ordenamiento jurídico previo.
 
-## El caso de Stroessner: un gobierno asaz fuerte (demasiado fuerte)
+## El caso de Stroessner: un gobierno asaz fuerte (bien fuerte)
 
-El gobierno de Alfredo Stroessner presentaba características que lo diferencian de una dictadura en sentido estricto. Stroessner fue **electo** en elecciones, conforme a la constitución y las leyes, por el pueblo. Incluso, fue el primer presidente electo de esa forma, varias veces. Varios partidos políticos operaban legalmente, incluyendo el Partido Liberal y el Partido Febrerista, aunque en condiciones de clara desigualdad frente al Partido Colorado.
+El gobierno de Alfredo Stroessner presentaba características que lo diferencian de una dictadura en sentido estricto. Stroessner fue el primer presidente **electo** en elecciones directas, cuando en el Paraguay anterior nunca había ocurrido y los políticos y el pueblo no conocían como hacerlo, pero, principio requieren las cosas, conforme a la constitución y las leyes, por el pueblo. Incluso, fue el primer presidente electo de esa forma, varias veces. Varios partidos políticos operaban legalmente, incluyendo el Partido Liberal y el Partido Febrerista, aunque en condiciones de clara desigualdad frente al Partido Colorado.
 
 El Paraguay mantuvo durante ese período una Constitución vigente —la de 1940, luego reemplazada por la de 1967—, un Poder Judicial formalmente activo, y relaciones diplomáticas normales con la comunidad internacional. El país era reconocido por todas las naciones democráticas del mundo y participaba activamente en organismos internacionales.
 
