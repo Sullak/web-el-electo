@@ -1,0 +1,133 @@
+---
+permalink: /contacto.html
+navSection: contacto
+---
+{% extends "layouts/base.njk" %}
+
+{% block title %}Contacto — El Electo: El Progreso Silenciado{% endblock %}
+
+{% block meta %}
+  <meta name="description" content="Contactá al autor Rubén Sahid Jure Yunis. Consultas sobre el libro, pedidos, conferencias y entrevistas.">
+  <link rel="canonical" href="https://www.elelecto.com.py/contacto.html">
+{% endblock %}
+
+{% block content %}
+
+<header class="page-header">
+  <div class="container">
+    <h1>Contacto</h1>
+    <p class="page-lead">Consultas, pedidos, entrevistas y conferencias</p>
+    <p class="breadcrumb"><a href="/">Inicio</a> › Contacto</p>
+  </div>
+</header>
+
+<section class="section section-alt">
+  <div class="container">
+    <div class="contact-grid">
+
+      <div>
+        <h2 style="margin-bottom:1.75rem;">¿En qué podemos ayudarte?</h2>
+
+        <div class="contact-item">
+          <div class="contact-icon-wrap">✉</div>
+          <div>
+            <strong>Correo electrónico</strong>
+            <p>info@elelecto.com.py<br>
+              <small style="color:#888;">Respondemos en 24–48 horas hábiles</small>
+            </p>
+          </div>
+        </div>
+
+        <div class="contact-item">
+          <div class="contact-icon-wrap">📱</div>
+          <div>
+            <strong>WhatsApp</strong>
+            <p>+595 XXX XXX XXX<br>
+              <small style="color:#888;">[Número a configurar por el autor]</small>
+            </p>
+          </div>
+        </div>
+
+        <div class="contact-item">
+          <div class="contact-icon-wrap">📍</div>
+          <div>
+            <strong>Ubicación</strong>
+            <p>Encarnación, Departamento de Itapúa<br>República del Paraguay</p>
+          </div>
+        </div>
+
+        <div style="margin-top:2rem;">
+          <h3 style="margin-bottom:1rem;">También podés contactarnos para:</h3>
+          <ul style="list-style:none; padding:0;">
+            <li style="padding:0.6rem 0; border-bottom:1px solid var(--cream-dark); font-size:0.9rem; display:flex; align-items:center; gap:0.75rem;">
+              <span style="color:var(--orange);">→</span> Pedidos del libro con dedicatoria
+            </li>
+            <li style="padding:0.6rem 0; border-bottom:1px solid var(--cream-dark); font-size:0.9rem; display:flex; align-items:center; gap:0.75rem;">
+              <span style="color:var(--orange);">→</span> Invitaciones a conferencias o disertaciones
+            </li>
+            <li style="padding:0.6rem 0; border-bottom:1px solid var(--cream-dark); font-size:0.9rem; display:flex; align-items:center; gap:0.75rem;">
+              <span style="color:var(--orange);">→</span> Entrevistas para medios de comunicación
+            </li>
+            <li style="padding:0.6rem 0; border-bottom:1px solid var(--cream-dark); font-size:0.9rem; display:flex; align-items:center; gap:0.75rem;">
+              <span style="color:var(--orange);">→</span> Pedidos institucionales o en cantidad
+            </li>
+            <li style="padding:0.6rem 0; font-size:0.9rem; display:flex; align-items:center; gap:0.75rem;">
+              <span style="color:var(--orange);">→</span> Preguntas sobre el contenido del libro
+            </li>
+          </ul>
+        </div>
+
+        <div style="margin-top:2rem;">
+          <a href="/comprar.html" class="btn btn-primary">Hacer un pedido</a>
+        </div>
+      </div>
+
+      <div>
+        <div id="contact-success" class="alert alert-success" style="display:none; flex-direction:column; gap:0.5rem;">
+          <strong>¡Mensaje enviado!</strong>
+          <span>Gracias por escribirnos. Recibirás una respuesta en las próximas 24–48 horas hábiles.</span>
+        </div>
+
+        <form id="contactForm" action="/submit-form" method="POST">
+          <input type="hidden" name="form_name" value="Contacto Web">
+
+          <div class="form-grid-2">
+            <div class="form-group">
+              <label class="form-label" for="nombre">Nombre *</label>
+              <input type="text" id="nombre" name="nombre" class="form-control" required placeholder="Tu nombre">
+            </div>
+            <div class="form-group">
+              <label class="form-label" for="email">Email *</label>
+              <input type="email" id="email" name="email" class="form-control" required placeholder="correo@ejemplo.com">
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label class="form-label" for="asunto">Asunto *</label>
+            <select id="asunto" name="asunto" class="form-control" required>
+              <option value="">— Seleccioná un asunto —</option>
+              <option value="pedido">Pedido del libro</option>
+              <option value="conferencia">Invitación a conferencia</option>
+              <option value="entrevista">Solicitud de entrevista</option>
+              <option value="consulta">Consulta sobre el libro</option>
+              <option value="prensa">Prensa o medios</option>
+              <option value="otro">Otro</option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label class="form-label" for="mensaje">Mensaje *</label>
+            <textarea id="mensaje" name="mensaje" class="form-control" rows="6" required
+              placeholder="Escribí tu consulta, propuesta o comentario aquí..."></textarea>
+          </div>
+
+          <button type="submit" class="btn btn-primary" style="width:100%; font-size:1rem; padding:1rem;">
+            Enviar mensaje →
+          </button>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
+
+{% endblock %}

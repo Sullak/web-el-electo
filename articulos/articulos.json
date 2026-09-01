@@ -1,5 +1,6 @@
 {
   "layout": "article.njk",
   "tags": ["articulos"],
-  "permalink": "/articulos/{{ page.fileSlug }}.html"
+  "permalink": "/articulos/{{ page.fileSlug }}.html",
+  "navSection": "articulos"
 }

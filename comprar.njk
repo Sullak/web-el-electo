@@ -1,0 +1,162 @@
+---
+permalink: /comprar.html
+navSection: comprar
+---
+{% extends "layouts/base.njk" %}
+
+{% block title %}Comprar el libro — El Electo: El Progreso Silenciado{% endblock %}
+
+{% block meta %}
+  <meta name="description" content="Pedí tu ejemplar de El Electo: El Progreso Silenciado. Disponible con dedicatoria personalizada del autor. Envíos a todo Paraguay y el exterior.">
+  <link rel="canonical" href="https://www.elelecto.com.py/comprar.html">
+{% endblock %}
+
+{% block content %}
+
+<header class="page-header">
+  <div class="container">
+    <h1>Pedir el libro</h1>
+    <p class="page-lead">Disponible con dedicatoria personalizada del autor</p>
+    <p class="breadcrumb"><a href="/">Inicio</a> › Comprar</p>
+  </div>
+</header>
+
+<section class="section section-alt">
+  <div class="container" style="max-width:900px;">
+    <div style="display:grid; grid-template-columns:240px 1fr; gap:4rem; align-items:start;">
+
+      <div style="position:sticky; top:88px;">
+        <img src="/tapa_el_electo.jpeg" alt="El Electo — El Progreso Silenciado"
+          style="width:100%; border-radius:4px; box-shadow:6px 6px 25px rgba(60,20,5,0.2); margin-bottom:1.25rem;">
+        <h3 style="font-size:1rem; margin-bottom:0.25rem;">El Electo</h3>
+        <p style="font-size:0.875rem; color:var(--orange); font-style:italic; margin-bottom:1rem;">...El Progreso Silenciado</p>
+        <p style="font-size:0.82rem; color:var(--text-body); margin-bottom:0.35rem;"><strong>Autor:</strong> Rubén Sahid Jure Yunis</p>
+        <p style="font-size:0.82rem; color:var(--text-body); margin-bottom:0.35rem;"><strong>ISBN:</strong> 978-99989-1-519-0</p>
+        <p style="font-size:0.82rem; color:var(--text-body); margin-bottom:1.5rem;"><strong>Páginas:</strong> 492</p>
+        <div class="alert alert-info" style="font-size:0.85rem;">
+          <span>ℹ️</span>
+          <span>Al enviar el formulario te redirigiremos a <strong>WhatsApp</strong> para coordinar el pago y el envío.</span>
+        </div>
+      </div>
+
+      <div>
+        <h2 style="margin-bottom:0.5rem;">Formulario de pedido</h2>
+        <p style="color:var(--text-body); font-size:0.95rem; margin-bottom:2rem;">
+          Completá los datos y elegí el tipo de ejemplar que deseás. Te contactaremos para coordinar el pago y el envío.
+        </p>
+
+        <div id="form-success" class="alert alert-success" style="display:none; flex-direction:column; gap:0.5rem;">
+          <strong>¡Pedido recibido!</strong>
+          <span>En un momento se abrirá WhatsApp para coordinar el pago y la entrega. Si no se abre automáticamente,
+            <a href="/contacto.html" style="color:var(--brown-dark); font-weight:600;">contáctanos aquí</a>.</span>
+        </div>
+
+        <form id="purchaseForm" action="/submit-form" method="POST">
+          <input type="hidden" name="form_name" value="Pedido de Libro">
+
+          <div class="form-grid-2">
+            <div class="form-group">
+              <label class="form-label" for="nombre">Nombre completo *</label>
+              <input type="text" id="nombre" name="nombre" class="form-control" required placeholder="Ej: María González">
+            </div>
+            <div class="form-group">
+              <label class="form-label" for="email">Correo electrónico *</label>
+              <input type="email" id="email" name="email" class="form-control" required placeholder="correo@ejemplo.com">
+            </div>
+          </div>
+
+          <div class="form-grid-2">
+            <div class="form-group">
+              <label class="form-label" for="ciudad">Ciudad *</label>
+              <input type="text" id="ciudad" name="ciudad" class="form-control" required placeholder="Ej: Asunción">
+            </div>
+            <div class="form-group">
+              <label class="form-label" for="pais">País *</label>
+              <input type="text" id="pais" name="pais" class="form-control" required placeholder="Ej: Paraguay" value="Paraguay">
+            </div>
+          </div>
+
+          <div class="form-grid-2">
+            <div class="form-group">
+              <label class="form-label" for="whatsapp_cliente">WhatsApp</label>
+              <input type="tel" id="whatsapp_cliente" name="whatsapp_cliente" class="form-control" placeholder="+595 XXX XXX XXX">
+              <p class="form-hint">Opcional — para coordinar el envío más rápido</p>
+            </div>
+            <div class="form-group">
+              <label class="form-label" for="cantidad">Cantidad de ejemplares *</label>
+              <select id="cantidad" name="cantidad" class="form-control" required>
+                <option value="1">1 ejemplar</option>
+                <option value="2">2 ejemplares</option>
+                <option value="3">3 ejemplares</option>
+                <option value="5">5 ejemplares</option>
+                <option value="10">10 ejemplares (institucional)</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label class="form-label">Tipo de ejemplar *</label>
+            <div class="radio-group">
+              <label class="radio-option">
+                <input type="radio" name="tipo_pedido" value="sin-dedicatoria" checked>
+                <span class="radio-label">
+                  <strong>Libro sin dedicatoria</strong>
+                  Ejemplar estándar tal como sale de imprenta
+                </span>
+              </label>
+              <label class="radio-option">
+                <input type="radio" name="tipo_pedido" value="dedicatoria">
+                <span class="radio-label">
+                  <strong>Con dedicatoria personalizada</strong>
+                  El autor escribe una dedicatoria especial para vos o para quien elijas
+                </span>
+              </label>
+              <label class="radio-option">
+                <input type="radio" name="tipo_pedido" value="solo-firma">
+                <span class="radio-label">
+                  <strong>Solo firma del autor</strong>
+                  Ejemplar firmado por Rubén Sahid Jure Yunis
+                </span>
+              </label>
+            </div>
+          </div>
+
+          <div class="form-group" id="dedicatoria-group">
+            <label class="form-label" for="dedicatoria">¿Para quién es la dedicatoria?</label>
+            <textarea id="dedicatoria" name="dedicatoria" class="form-control" rows="3"
+              placeholder="Ej: Para Carlos González, con mis mejores deseos.&#10;O simplemente el nombre de la persona."></textarea>
+            <p class="form-hint">El autor escribirá la dedicatoria de puño y letra dentro del libro.</p>
+          </div>
+
+          <div class="form-group">
+            <label class="form-label" for="mensaje">Consultas o comentarios adicionales</label>
+            <textarea id="mensaje" name="mensaje" class="form-control" rows="3"
+              placeholder="¿Tenés alguna consulta sobre el envío, precio u otra cosa?"></textarea>
+          </div>
+
+          <button type="submit" class="btn btn-primary" style="width:100%; font-size:1rem; padding:1rem;">
+            Enviar pedido y continuar por WhatsApp →
+          </button>
+          <p style="font-size:0.8rem; color:#888; margin-top:0.75rem; text-align:center;">
+            Al enviar el formulario coordinamos el pago y la entrega por WhatsApp o email.
+          </p>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section section-dark">
+  <div class="container" style="max-width:700px; text-align:center;">
+    <h2 style="color:var(--white);">¿Tenés dudas antes de comprar?</h2>
+    <p style="color:rgba(255,255,255,0.75); margin-top:1rem;">
+      Podés conocer más sobre el libro antes de hacer tu pedido.
+    </p>
+    <div style="display:flex; gap:1rem; justify-content:center; flex-wrap:wrap; margin-top:2rem;">
+      <a href="/el-libro.html" class="btn btn-primary">Ver el libro</a>
+      <a href="/contacto.html" class="btn btn-outline">Escribirnos</a>
+    </div>
+  </div>
+</section>
+
+{% endblock %}

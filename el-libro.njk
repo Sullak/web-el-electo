@@ -1,16 +1,21 @@
-<!DOCTYPE html>
-<html lang="es">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>El Libro — El Electo: El Progreso Silenciado | Rubén Sahid Jure Yunis</title>
+---
+permalink: /el-libro.html
+navSection: el-libro
+---
+{% extends "layouts/base.njk" %}
+
+{% block title %}El Libro — El Electo: El Progreso Silenciado | Rubén Sahid Jure Yunis{% endblock %}
+
+{% block meta %}
   <meta name="description" content="El Electo: El Progreso Silenciado. 492 páginas de investigación documental sobre la historia política y económica del Paraguay. ISBN 978-99989-1-519-0.">
   <meta name="keywords" content="El Electo libro, Rubén Jure Yunis, historia Paraguay, Alfredo Stroessner, progreso Paraguay, ISBN 978-99989-1-519-0">
   <link rel="canonical" href="https://www.elelecto.com.py/el-libro.html">
   <meta property="og:title" content="El Libro — El Electo: El Progreso Silenciado">
   <meta property="og:description" content="492 páginas de investigación documental sobre la historia política y económica del Paraguay.">
   <meta property="og:image" content="https://www.elelecto.com.py/tapa_el_electo.jpeg">
-  <link rel="stylesheet" href="css/style.css">
+{% endblock %}
+
+{% block head %}
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -22,37 +27,21 @@
     "datePublished": "2025",
     "numberOfPages": 492,
     "publisher": { "@type": "Organization", "name": "Centro Gráfico S.R.L.", "address": { "@type": "PostalAddress", "addressLocality": "Encarnación", "addressCountry": "PY" } },
-    "description": "Investigación documental de 492 páginas sobre la historia política, económica e institucional del Paraguay. El libro analiza el período del gobierno del General Alfredo Stroessner, argumentando que se trató de un gobierno autoritario electo y no de una dictadura, respaldándose en datos económicos, obras de infraestructura y el itinerario democrático paraguayo.",
+    "description": "Investigación documental de 492 páginas sobre la historia política, económica e institucional del Paraguay.",
     "genre": ["History", "Political Science", "Latin American Studies"],
-    "about": ["Paraguay", "Alfredo Stroessner", "historia política", "progreso económico", "Itaipú", "independencia paraguaya"],
     "image": "https://www.elelecto.com.py/tapa_el_electo.jpeg",
     "url": "https://www.elelecto.com.py/el-libro.html"
   }
   </script>
-</head>
-<body>
+{% endblock %}
 
-<nav class="navbar" id="navbar">
-  <a href="index.html" class="navbar-brand">EL <span>ELECTO</span></a>
-  <button class="nav-toggle" id="navToggle" aria-label="Abrir menú">
-    <span></span><span></span><span></span>
-  </button>
-  <ul class="nav-links" id="navLinks">
-    <li><a href="index.html">Inicio</a></li>
-    <li><a href="el-libro.html" class="active">El Libro</a></li>
-    <li><a href="el-autor.html">El Autor</a></li>
-    <li><a href="articulos.html">Artículos</a></li>
-    <li><a href="cronologia.html">Cronología</a></li>
-    <li><a href="contacto.html">Contacto</a></li>
-    <li><a href="comprar.html" class="btn-comprar">Comprar</a></li>
-  </ul>
-</nav>
+{% block content %}
 
 <header class="page-header">
   <div class="container">
     <h1>El Libro</h1>
     <p class="page-lead">El Electo: El Progreso Silenciado</p>
-    <p class="breadcrumb"><a href="index.html">Inicio</a> › El Libro</p>
+    <p class="breadcrumb"><a href="/">Inicio</a> › El Libro</p>
   </div>
 </header>
 
@@ -61,10 +50,10 @@
   <div class="container">
     <div class="book-showcase">
       <div class="book-cover-showcase">
-        <img src="tapa_el_electo.jpeg" alt="Portada del libro El Electo — El Progreso Silenciado">
+        <img src="/tapa_el_electo.jpeg" alt="Portada del libro El Electo — El Progreso Silenciado">
         <div style="margin-top:1.5rem; display:flex; flex-direction:column; gap:0.75rem;">
-          <a href="comprar.html" class="btn btn-primary" style="width:100%; text-align:center;">Pedir mi ejemplar</a>
-          <a href="contacto.html" class="btn btn-dark" style="width:100%; text-align:center;">Consultas</a>
+          <a href="/comprar.html" class="btn btn-primary" style="width:100%; text-align:center;">Pedir mi ejemplar</a>
+          <a href="/contacto.html" class="btn btn-dark" style="width:100%; text-align:center;">Consultas</a>
         </div>
       </div>
       <div>
@@ -140,7 +129,6 @@
 
     <div style="max-width:820px; margin:0 auto;">
 
-      <!-- Partes preliminares -->
       <div class="index-part">
         <div class="index-part-header">Preliminares</div>
         <div class="index-chapters">
@@ -152,7 +140,6 @@
         </div>
       </div>
 
-      <!-- Primera Parte -->
       <div class="index-part">
         <div class="index-part-header">Primera Parte — Los orígenes y la historia hasta 1950</div>
         <div class="index-chapters">
@@ -172,7 +159,6 @@
         </div>
       </div>
 
-      <!-- Segunda Parte -->
       <div class="index-part">
         <div class="index-part-header">Segunda Parte — El gobierno de Alfredo Stroessner (1954–1989)</div>
         <div class="index-chapters">
@@ -186,7 +172,6 @@
         </div>
       </div>
 
-      <!-- Tercera Parte -->
       <div class="index-part">
         <div class="index-part-header">Tercera Parte — Los gobiernos democráticos post-1989</div>
         <div class="index-chapters">
@@ -199,7 +184,6 @@
         </div>
       </div>
 
-      <!-- Cierre -->
       <div class="index-part">
         <div class="index-part-header">Cierre</div>
         <div class="index-chapters">
@@ -219,7 +203,7 @@
       <h2>Opiniones de lectores</h2>
       <p>¿Leíste el libro o seguís los temas que trata? Compartí tu opinión o debate aquí.</p>
       <span class="comments-moderation-note">
-        🛡️ Los comentarios son revisados antes de publicarse — se valora el debate respetuoso
+        Los comentarios son revisados antes de publicarse — se valora el debate respetuoso
       </span>
     </div>
     <div id="disqus_thread"></div>
@@ -230,7 +214,6 @@
       };
       (function() {
         var d = document, s = d.createElement('script');
-        // REEMPLAZAR "EL-ELECTO-SHORTNAME" con el shortname de tu cuenta Disqus
         s.src = 'https://el-electo.disqus.com/embed.js';
         s.setAttribute('data-timestamp', +new Date());
         (d.head || d.body).appendChild(s);
@@ -252,57 +235,10 @@
       Podés pedirlo con o sin dedicatoria personalizada del autor. Envíos a todo el país y al exterior.
     </p>
     <div style="display:flex; gap:1rem; justify-content:center; flex-wrap:wrap; margin-top:2rem;">
-      <a href="comprar.html" class="btn btn-primary">Hacer un pedido</a>
-      <a href="el-autor.html" class="btn btn-outline">Conocer al autor</a>
+      <a href="/comprar.html" class="btn btn-primary">Hacer un pedido</a>
+      <a href="/el-autor.html" class="btn btn-outline">Conocer al autor</a>
     </div>
   </div>
 </section>
 
-<footer class="footer">
-  <div class="container">
-    <div class="footer-grid">
-      <div>
-        <div class="footer-brand">EL <span>ELECTO</span></div>
-        <p class="footer-desc">Centro de documentación sobre la historia política, económica e institucional del Paraguay. Una investigación de Rubén Sahid Jure Yunis.</p>
-        <div class="social-links">
-          <a href="#" class="social-link" title="YouTube">▶</a>
-          <a href="#" class="social-link" title="TikTok">♪</a>
-          <a href="#" class="social-link" title="Facebook">f</a>
-        </div>
-      </div>
-      <div>
-        <h4 class="footer-col-title">El Libro</h4>
-        <ul class="footer-links">
-          <li><a href="el-libro.html">Descripción</a></li>
-          <li><a href="el-libro.html#indice">Índice</a></li>
-          <li><a href="el-libro.html#prologo">Prólogo</a></li>
-          <li><a href="comprar.html">Comprar</a></li>
-        </ul>
-      </div>
-      <div>
-        <h4 class="footer-col-title">Explorar</h4>
-        <ul class="footer-links">
-          <li><a href="articulos.html">Artículos</a></li>
-          <li><a href="cronologia.html">Cronología</a></li>
-          <li><a href="el-autor.html">El Autor</a></li>
-          <li><a href="contacto.html">Contacto</a></li>
-        </ul>
-      </div>
-      <div>
-        <h4 class="footer-col-title">Contacto</h4>
-        <ul class="footer-links">
-          <li><a href="mailto:info@elelecto.com.py">info@elelecto.com.py</a></li>
-          <li><a href="comprar.html">Hacer un pedido</a></li>
-        </ul>
-      </div>
-    </div>
-    <div class="footer-bottom">
-      <p>© 2025 Rubén Sahid Jure Yunis · Todos los derechos reservados · ISBN: 978-99989-1-519-0</p>
-      <p>Encarnación, Paraguay</p>
-    </div>
-  </div>
-</footer>
-
-<script src="js/main.js"></script>
-</body>
-</html>
+{% endblock %}

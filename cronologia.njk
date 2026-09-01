@@ -1,35 +1,24 @@
-<!DOCTYPE html>
-<html lang="es">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Cronología histórica del Paraguay — El Electo</title>
+---
+permalink: /cronologia.html
+navSection: cronologia
+---
+{% extends "layouts/base.njk" %}
+
+{% block title %}Cronología histórica del Paraguay — El Electo{% endblock %}
+
+{% block meta %}
   <meta name="description" content="Cronología completa de la historia del Paraguay desde 1524 hasta 1992. Independencia, guerras, constituciones, gobiernos y los hitos del progreso nacional.">
   <meta name="keywords" content="cronología Paraguay, historia Paraguay fechas, independencia Paraguay 1811, Stroessner 1954, guerra chaco 1932, constitución Paraguay, Itaipú 1973">
   <link rel="canonical" href="https://www.elelecto.com.py/cronologia.html">
-  <link rel="stylesheet" href="css/style.css">
-</head>
-<body>
+{% endblock %}
 
-<nav class="navbar" id="navbar">
-  <a href="index.html" class="navbar-brand">EL <span>ELECTO</span></a>
-  <button class="nav-toggle" id="navToggle" aria-label="Abrir menú"><span></span><span></span><span></span></button>
-  <ul class="nav-links" id="navLinks">
-    <li><a href="index.html">Inicio</a></li>
-    <li><a href="el-libro.html">El Libro</a></li>
-    <li><a href="el-autor.html">El Autor</a></li>
-    <li><a href="articulos.html">Artículos</a></li>
-    <li><a href="cronologia.html" class="active">Cronología</a></li>
-    <li><a href="contacto.html">Contacto</a></li>
-    <li><a href="comprar.html" class="btn-comprar">Comprar</a></li>
-  </ul>
-</nav>
+{% block content %}
 
 <header class="page-header">
   <div class="container">
     <h1>Cronología histórica</h1>
     <p class="page-lead">Los hitos que marcaron la historia del Paraguay desde 1524 hasta 1992</p>
-    <p class="breadcrumb"><a href="index.html">Inicio</a> › Cronología</p>
+    <p class="breadcrumb"><a href="/">Inicio</a> › Cronología</p>
   </div>
 </header>
 
@@ -199,55 +188,10 @@
       <p style="font-size:0.9rem; color:#888; margin-bottom:1.5rem;">
         Cronología basada en <em>El Electo: El Progreso Silenciado</em> de Rubén Sahid Jure Yunis.
       </p>
-      <a href="el-libro.html" class="btn btn-dark">Leer el análisis completo en el libro</a>
+      <a href="/el-libro.html" class="btn btn-dark">Leer el análisis completo en el libro</a>
     </div>
 
   </div>
 </section>
 
-<footer class="footer">
-  <div class="container">
-    <div class="footer-grid">
-      <div>
-        <div class="footer-brand">EL <span>ELECTO</span></div>
-        <p class="footer-desc">Centro de documentación sobre la historia política, económica e institucional del Paraguay.</p>
-        <div class="social-links">
-          <a href="#" class="social-link">▶</a>
-          <a href="#" class="social-link">♪</a>
-          <a href="#" class="social-link">f</a>
-        </div>
-      </div>
-      <div>
-        <h4 class="footer-col-title">El Libro</h4>
-        <ul class="footer-links">
-          <li><a href="el-libro.html">Descripción</a></li>
-          <li><a href="el-libro.html#indice">Índice</a></li>
-          <li><a href="comprar.html">Comprar</a></li>
-        </ul>
-      </div>
-      <div>
-        <h4 class="footer-col-title">Explorar</h4>
-        <ul class="footer-links">
-          <li><a href="articulos.html">Artículos</a></li>
-          <li><a href="cronologia.html">Cronología</a></li>
-          <li><a href="el-autor.html">El Autor</a></li>
-        </ul>
-      </div>
-      <div>
-        <h4 class="footer-col-title">Contacto</h4>
-        <ul class="footer-links">
-          <li><a href="mailto:info@elelecto.com.py">info@elelecto.com.py</a></li>
-          <li><a href="comprar.html">Hacer un pedido</a></li>
-        </ul>
-      </div>
-    </div>
-    <div class="footer-bottom">
-      <p>© 2025 Rubén Sahid Jure Yunis · Todos los derechos reservados</p>
-      <p>Encarnación, Paraguay</p>
-    </div>
-  </div>
-</footer>
-
-<script src="js/main.js"></script>
-</body>
-</html>
+{% endblock %}

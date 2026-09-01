@@ -1,12 +1,13 @@
-<!DOCTYPE html>
-<html lang="es">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>{{ title }} — El Electo</title>
+{% extends "layouts/base.njk" %}
+
+{% block title %}{{ title }} — El Electo{% endblock %}
+
+{% block meta %}
   <meta name="description" content="{{ description }}">
   <link rel="canonical" href="https://www.elelecto.com.py/articulos/{{ page.fileSlug }}.html">
-  <link rel="stylesheet" href="/css/style.css">
+{% endblock %}
+
+{% block head %}
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -36,22 +37,9 @@
     .article-body h3 { margin: 2rem 0 0.75rem; }
     .article-body p { margin-bottom: 1.2rem; line-height: 1.8; }
   </style>
-</head>
-<body>
+{% endblock %}
 
-<nav class="navbar" id="navbar">
-  <a href="/" class="navbar-brand">EL <span>ELECTO</span></a>
-  <button class="nav-toggle" id="navToggle" aria-label="Abrir menú"><span></span><span></span><span></span></button>
-  <ul class="nav-links" id="navLinks">
-    <li><a href="/">Inicio</a></li>
-    <li><a href="/el-libro.html">El Libro</a></li>
-    <li><a href="/el-autor.html">El Autor</a></li>
-    <li><a href="/articulos.html" class="active">Artículos</a></li>
-    <li><a href="/cronologia.html">Cronología</a></li>
-    <li><a href="/contacto.html">Contacto</a></li>
-    <li><a href="/comprar.html" class="btn-comprar">Comprar</a></li>
-  </ul>
-</nav>
+{% block content %}
 
 <header class="page-header">
   <div class="container">
@@ -66,10 +54,10 @@
   <div class="container" style="max-width:780px;">
 
     {% if autor %}
-        <div style="font-size:0.82rem; color:#888; margin-bottom:2rem; padding-bottom:1.5rem; border-bottom:1px solid var(--cream-dark);">
-          Por <strong style="color:var(--brown-dark);">{{ autor }}</strong>
-        </div>
-        {% endif %}
+    <div style="font-size:0.82rem; color:#888; margin-bottom:2rem; padding-bottom:1.5rem; border-bottom:1px solid var(--cream-dark);">
+      Por <strong style="color:var(--brown-dark);">{{ autor }}</strong>
+    </div>
+    {% endif %}
 
     {% if intro %}
     <p style="font-size:1.1rem; font-weight:500; color:var(--brown-dark); line-height:1.7; margin-bottom:2rem;">
@@ -125,48 +113,4 @@
   </div>
 </section>
 
-<footer class="footer">
-  <div class="container">
-    <div class="footer-grid">
-      <div>
-        <div class="footer-brand">EL <span>ELECTO</span></div>
-        <p class="footer-desc">Centro de documentación sobre la historia política, económica e institucional del Paraguay.</p>
-        <div class="social-links">
-          <a href="#" class="social-link">▶</a>
-          <a href="#" class="social-link">♪</a>
-          <a href="#" class="social-link">f</a>
-        </div>
-      </div>
-      <div>
-        <h4 class="footer-col-title">El Libro</h4>
-        <ul class="footer-links">
-          <li><a href="/el-libro.html">Descripción</a></li>
-          <li><a href="/comprar.html">Comprar</a></li>
-        </ul>
-      </div>
-      <div>
-        <h4 class="footer-col-title">Explorar</h4>
-        <ul class="footer-links">
-          <li><a href="/articulos.html">Artículos</a></li>
-          <li><a href="/cronologia.html">Cronología</a></li>
-          <li><a href="/el-autor.html">El Autor</a></li>
-        </ul>
-      </div>
-      <div>
-        <h4 class="footer-col-title">Contacto</h4>
-        <ul class="footer-links">
-          <li><a href="mailto:info@elelecto.com.py">info@elelecto.com.py</a></li>
-          <li><a href="/comprar.html">Hacer un pedido</a></li>
-        </ul>
-      </div>
-    </div>
-    <div class="footer-bottom">
-      <p>© 2025 Rubén Sahid Jure Yunis · Todos los derechos reservados</p>
-      <p>Encarnación, Paraguay</p>
-    </div>
-  </div>
-</footer>
-
-<script src="/js/main.js"></script>
-</body>
-</html>
+{% endblock %}

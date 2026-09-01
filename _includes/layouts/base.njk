@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>{% block title %}El Electo — El Progreso Silenciado | Rubén Sahid Jure Yunis{% endblock %}</title>
+  {% block meta %}{% endblock %}
+  <link rel="stylesheet" href="/css/style.css">
+  {% block head %}{% endblock %}
+</head>
+<body>
+
+{% include "partials/nav.njk" %}
+
+{% block content %}{% endblock %}
+
+{% include "partials/footer.njk" %}
+
+<script src="/js/main.js"></script>
+{% block scripts %}{% endblock %}
+</body>
+</html>

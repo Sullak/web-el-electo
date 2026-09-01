@@ -19,6 +19,11 @@ collections:
     delete: true
     slug: "{{slug}}"
     fields:
+      - label: "Publicado"
+        name: "published"
+        widget: "boolean"
+        default: true
+        hint: "Desmarcá para guardar como borrador (no aparece en el sitio)."
       - label: "Título"
         name: "title"
         widget: "string"
@@ -52,3 +57,58 @@ collections:
       - label: "Contenido"
         name: "body"
         widget: "markdown"
+
+  - name: "multimedia"
+    label: "Multimedia y Entrevistas"
+    label_singular: "Entrevista / Disertación"
+    folder: "multimedia"
+    create: true
+    delete: true
+    slug: "{{slug}}"
+    fields:
+      - label: "Publicado"
+        name: "published"
+        widget: "boolean"
+        default: true
+        hint: "Desmarcá para guardar como borrador (no aparece en el sitio)."
+      - label: "Título"
+        name: "title"
+        widget: "string"
+      - label: "Medio de comunicación / Evento"
+        name: "medio"
+        widget: "string"
+        hint: "Ej: Radio Ñandutí, Unicanal, Disertación Encarnación"
+      - label: "Tipo de contenido"
+        name: "tipo"
+        widget: "select"
+        options:
+          - "Video (YouTube)"
+          - "Entrevista Radial"
+          - "Nota de Prensa"
+          - "Disertación"
+        default: "Video (YouTube)"
+      - label: "ID de Video de YouTube (opcional)"
+        name: "youtube_id"
+        widget: "string"
+        required: false
+        hint: "Solo el ID del video (ej: dQw4w9WgXcQ). Deja vacío si no es un video de YouTube."
+      - label: "Enlace externo (URL)"
+        name: "url"
+        widget: "string"
+        required: false
+        hint: "URL completa al video, audio o noticia externa."
+      - label: "Imagen / Miniatura (opcional)"
+        name: "imagen"
+        widget: "image"
+        required: false
+        hint: "Foto o captura para mostrar en la tarjeta. Solo necesaria si no es un video de YouTube."
+      - label: "Fecha de publicación / emisión"
+        name: "date"
+        widget: "datetime"
+        date_format: "YYYY-MM-DD"
+        time_format: false
+        format: "YYYY-MM-DD"
+      - label: "Resumen o descripción corta"
+        name: "description"
+        widget: "text"
+        required: false

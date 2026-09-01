@@ -1,13 +1,18 @@
-<!DOCTYPE html>
-<html lang="es">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>El Autor — Rubén Sahid Jure Yunis | El Electo</title>
+---
+permalink: /el-autor.html
+navSection: el-autor
+---
+{% extends "layouts/base.njk" %}
+
+{% block title %}El Autor — Rubén Sahid Jure Yunis | El Electo{% endblock %}
+
+{% block meta %}
   <meta name="description" content="Rubén Sahid Jure Yunis: escritor, investigador histórico, Brigadier General de Bomberos Voluntarios, Académico de la Historia y la Geografía Militar del Paraguay.">
   <meta name="keywords" content="Rubén Sahid Jure Yunis, autor paraguayo, escritor Paraguay, Academico Historia Paraguay, Bomberos Voluntarios Encarnación">
   <link rel="canonical" href="https://www.elelecto.com.py/el-autor.html">
-  <link rel="stylesheet" href="css/style.css">
+{% endblock %}
+
+{% block head %}
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -28,32 +33,18 @@
     ],
     "description": "Escritor, investigador, Brigadier General de Bomberos Voluntarios y Académico de Número de la Academia de la Historia y la Geografía Militar del Paraguay. Autor de El Electo: El Progreso Silenciado.",
     "image": "https://www.elelecto.com.py/Ruben_Jure_uniforme_bombero.png",
-    "url": "https://www.elelecto.com.py/el-autor.html",
-    "sameAs": []
+    "url": "https://www.elelecto.com.py/el-autor.html"
   }
   </script>
-</head>
-<body>
+{% endblock %}
 
-<nav class="navbar" id="navbar">
-  <a href="index.html" class="navbar-brand">EL <span>ELECTO</span></a>
-  <button class="nav-toggle" id="navToggle" aria-label="Abrir menú"><span></span><span></span><span></span></button>
-  <ul class="nav-links" id="navLinks">
-    <li><a href="index.html">Inicio</a></li>
-    <li><a href="el-libro.html">El Libro</a></li>
-    <li><a href="el-autor.html" class="active">El Autor</a></li>
-    <li><a href="articulos.html">Artículos</a></li>
-    <li><a href="cronologia.html">Cronología</a></li>
-    <li><a href="contacto.html">Contacto</a></li>
-    <li><a href="comprar.html" class="btn-comprar">Comprar</a></li>
-  </ul>
-</nav>
+{% block content %}
 
 <header class="page-header">
   <div class="container">
     <h1>El Autor</h1>
     <p class="page-lead">Rubén Sahid Jure Yunis</p>
-    <p class="breadcrumb"><a href="index.html">Inicio</a> › El Autor</p>
+    <p class="breadcrumb"><a href="/">Inicio</a> › El Autor</p>
   </div>
 </header>
 
@@ -61,10 +52,9 @@
   <div class="container">
     <div class="author-layout">
 
-      <!-- Sidebar -->
       <div class="author-sidebar">
         <div class="author-photo-wrap">
-          <img src="Ruben_Jure_uniforme_bombero.png"
+          <img src="/Ruben_Jure_uniforme_bombero.png"
                alt="Rubén Sahid Jure Yunis, Brigadier General del Cuerpo de Bomberos Voluntarios de Encarnación y autor del libro El Electo">
         </div>
         <p class="author-name">Rubén Sahid Jure Yunis</p>
@@ -99,7 +89,6 @@
         </div>
       </div>
 
-      <!-- Contenido principal -->
       <div>
         <p style="font-size:0.8rem; text-transform:uppercase; letter-spacing:3px; color:var(--orange); font-weight:600; margin-bottom:0.5rem;">Biografía</p>
         <h2 style="margin-bottom:1.5rem;">Una vida dedicada al servicio, la cultura y la verdad histórica</h2>
@@ -173,58 +162,13 @@
         </div>
 
         <div style="display:flex; gap:1rem; flex-wrap:wrap; margin-top:2.5rem;">
-          <a href="el-libro.html" class="btn btn-dark">Ver el libro</a>
-          <a href="comprar.html" class="btn btn-primary">Pedir un ejemplar</a>
-          <a href="contacto.html" class="btn btn-outline" style="color:var(--brown-dark); border-color:var(--brown-dark);">Escribir al autor</a>
+          <a href="/el-libro.html" class="btn btn-dark">Ver el libro</a>
+          <a href="/comprar.html" class="btn btn-primary">Pedir un ejemplar</a>
+          <a href="/contacto.html" class="btn btn-outline" style="color:var(--brown-dark); border-color:var(--brown-dark);">Escribir al autor</a>
         </div>
       </div>
     </div>
   </div>
 </section>
 
-<footer class="footer">
-  <div class="container">
-    <div class="footer-grid">
-      <div>
-        <div class="footer-brand">EL <span>ELECTO</span></div>
-        <p class="footer-desc">Centro de documentación sobre la historia política, económica e institucional del Paraguay. Una investigación de Rubén Sahid Jure Yunis.</p>
-        <div class="social-links">
-          <a href="#" class="social-link">▶</a>
-          <a href="#" class="social-link">♪</a>
-          <a href="#" class="social-link">f</a>
-        </div>
-      </div>
-      <div>
-        <h4 class="footer-col-title">El Libro</h4>
-        <ul class="footer-links">
-          <li><a href="el-libro.html">Descripción</a></li>
-          <li><a href="el-libro.html#indice">Índice</a></li>
-          <li><a href="comprar.html">Comprar</a></li>
-        </ul>
-      </div>
-      <div>
-        <h4 class="footer-col-title">Explorar</h4>
-        <ul class="footer-links">
-          <li><a href="articulos.html">Artículos</a></li>
-          <li><a href="cronologia.html">Cronología</a></li>
-          <li><a href="el-autor.html">El Autor</a></li>
-        </ul>
-      </div>
-      <div>
-        <h4 class="footer-col-title">Contacto</h4>
-        <ul class="footer-links">
-          <li><a href="mailto:info@elelecto.com.py">info@elelecto.com.py</a></li>
-          <li><a href="comprar.html">Hacer un pedido</a></li>
-        </ul>
-      </div>
-    </div>
-    <div class="footer-bottom">
-      <p>© 2025 Rubén Sahid Jure Yunis · Todos los derechos reservados · ISBN: 978-99989-1-519-0</p>
-      <p>Encarnación, Paraguay</p>
-    </div>
-  </div>
-</footer>
-
-<script src="js/main.js"></script>
-</body>
-</html>
+{% endblock %}

@@ -1,0 +1,16 @@
+<nav class="navbar" id="navbar">
+  <a href="/" class="navbar-brand">EL <span>ELECTO</span></a>
+  <button class="nav-toggle" id="navToggle" aria-label="Abrir menú">
+    <span></span><span></span><span></span>
+  </button>
+  <ul class="nav-links" id="navLinks">
+    <li><a href="/" {% if navSection == "inicio" %}class="active"{% endif %}>Inicio</a></li>
+    <li><a href="/el-libro.html" {% if navSection == "el-libro" %}class="active"{% endif %}>El Libro</a></li>
+    <li><a href="/el-autor.html" {% if navSection == "el-autor" %}class="active"{% endif %}>El Autor</a></li>
+    <li><a href="/articulos.html" {% if navSection == "articulos" %}class="active"{% endif %}>Artículos</a></li>
+    <li><a href="/multimedia.html" {% if navSection == "multimedia" %}class="active"{% endif %}>Multimedia</a></li>
+    <li><a href="/cronologia.html" {% if navSection == "cronologia" %}class="active"{% endif %}>Cronología</a></li>
+    <li><a href="/contacto.html" {% if navSection == "contacto" %}class="active"{% endif %}>Contacto</a></li>
+    <li><a href="/comprar.html" class="btn-comprar{% if navSection == 'comprar' %} active{% endif %}">Comprar</a></li>
+  </ul>
+</nav>

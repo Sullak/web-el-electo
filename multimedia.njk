@@ -1,0 +1,184 @@
+---
+permalink: /multimedia.html
+navSection: multimedia
+---
+{% extends "layouts/base.njk" %}
+
+{% block title %}Multimedia y Entrevistas — El Electo | Rubén Sahid Jure Yunis{% endblock %}
+
+{% block meta %}
+  <meta name="description" content="Videos, entrevistas radiales, notas de prensa y disertaciones de Rubén Sahid Jure Yunis, autor de El Electo: El Progreso Silenciado.">
+  <link rel="canonical" href="https://www.elelecto.com.py/multimedia.html">
+{% endblock %}
+
+{% block content %}
+
+<header class="page-header">
+  <div class="container">
+    <h1>Multimedia y Entrevistas</h1>
+    <p class="page-lead">Videos, entrevistas y apariciones en medios de comunicación</p>
+    <p class="breadcrumb"><a href="/">Inicio</a> › Multimedia</p>
+  </div>
+</header>
+
+<section class="section section-alt">
+  <div class="container">
+
+  {% set mediaItems = collections.multimedia | reverse %}
+
+  {% if mediaItems.length == 0 %}
+
+    <div class="media-empty-state">
+      <div class="media-empty-icon">▶</div>
+      <h2>Próximamente</h2>
+      <p>Los videos, entrevistas y apariciones en medios se publicarán aquí.</p>
+      <a href="/contacto.html" class="btn btn-dark" style="margin-top:1.5rem;">Proponer una entrevista</a>
+    </div>
+
+  {% else %}
+
+    {# — ÍTEM DESTACADO (el primero de la lista) — #}
+    {% set featured = mediaItems[0] %}
+    <div class="media-featured">
+      {% if featured.data.youtube_id %}
+        <div class="media-featured-video">
+          <div class="video-embed-container">
+            <iframe
+              src="https://www.youtube-nocookie.com/embed/{{ featured.data.youtube_id }}"
+              title="{{ featured.data.title }}"
+              loading="lazy"
+              frameborder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowfullscreen></iframe>
+          </div>
+        </div>
+      {% elif featured.data.imagen %}
+        <div class="media-featured-image">
+          <img src="{{ featured.data.imagen }}" alt="{{ featured.data.title }}">
+        </div>
+      {% else %}
+        <div class="media-featured-placeholder">
+          <span class="media-type-icon">{{ featured.data.tipo | replace("(YouTube)", "") | trim }}</span>
+        </div>
+      {% endif %}
+
+      <div class="media-featured-content">
+        <span class="media-type-badge media-type-badge--featured">{{ featured.data.tipo }}</span>
+        <h2 class="media-featured-title">{{ featured.data.title }}</h2>
+        {% if featured.data.medio %}
+          <p class="media-featured-medio">{{ featured.data.medio }}</p>
+        {% endif %}
+        {% if featured.data.description %}
+          <p class="media-featured-desc">{{ featured.data.description }}</p>
+        {% endif %}
+        <p class="media-featured-date">{{ featured.data.date | date("DD/MM/YYYY") if featured.data.date }}</p>
+        {% if featured.data.url and not featured.data.youtube_id %}
+          <a href="{{ featured.data.url }}" class="btn btn-primary" target="_blank" rel="noopener">
+            Ver contenido →
+          </a>
+        {% elif featured.data.youtube_id %}
+          <a href="https://www.youtube.com/watch?v={{ featured.data.youtube_id }}" class="btn btn-dark" target="_blank" rel="noopener">
+            Ver en YouTube →
+          </a>
+        {% endif %}
+      </div>
+    </div>
+
+    {# — FILTROS — #}
+    {% if mediaItems.length > 1 %}
+    <div class="media-filters" id="mediaFilters" role="tablist" aria-label="Filtrar por tipo">
+      <button class="filter-btn active" data-filter="todos" role="tab" aria-selected="true">Todos</button>
+      <button class="filter-btn" data-filter="Video (YouTube)" role="tab" aria-selected="false">Video</button>
+      <button class="filter-btn" data-filter="Entrevista Radial" role="tab" aria-selected="false">Entrevista Radial</button>
+      <button class="filter-btn" data-filter="Nota de Prensa" role="tab" aria-selected="false">Nota de Prensa</button>
+      <button class="filter-btn" data-filter="Disertación" role="tab" aria-selected="false">Disertación</button>
+    </div>
+
+    {# — GRID (todos excepto el destacado) — #}
+    <div class="media-grid" id="mediaGrid">
+      {% for item in mediaItems %}
+      {% if not loop.first %}
+      <div class="media-card card-animate" data-tipo="{{ item.data.tipo }}">
+
+        {% if item.data.youtube_id %}
+          <div class="video-embed-container">
+            <iframe
+              src="https://www.youtube-nocookie.com/embed/{{ item.data.youtube_id }}"
+              title="{{ item.data.title }}"
+              loading="lazy"
+              frameborder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowfullscreen></iframe>
+          </div>
+        {% elif item.data.imagen %}
+          <div class="media-card-image">
+            <img src="{{ item.data.imagen }}" alt="{{ item.data.title }}" loading="lazy">
+          </div>
+        {% else %}
+          <div class="media-card-placeholder">
+            <span>{{ item.data.tipo | replace("(YouTube)", "") | trim }}</span>
+          </div>
+        {% endif %}
+
+        <div class="media-card-body">
+          <span class="media-type-badge">{{ item.data.tipo }}</span>
+          <h3 class="media-card-title">{{ item.data.title }}</h3>
+          {% if item.data.medio %}
+            <p class="media-card-medio">{{ item.data.medio }}</p>
+          {% endif %}
+          {% if item.data.description %}
+            <p class="media-card-desc">{{ item.data.description }}</p>
+          {% endif %}
+          <div class="media-card-footer">
+            <span class="media-card-date">{{ item.data.date | date("DD/MM/YYYY") if item.data.date }}</span>
+            {% if item.data.url %}
+              <a href="{{ item.data.url }}" class="media-card-link" target="_blank" rel="noopener">
+                Ver →
+              </a>
+            {% endif %}
+          </div>
+        </div>
+
+      </div>
+      {% endif %}
+      {% endfor %}
+    </div>
+    {% endif %}
+
+  {% endif %}
+
+  </div>
+</section>
+
+{% endblock %}
+
+{% block scripts %}
+<script>
+(function() {
+  var filters = document.querySelectorAll('.filter-btn');
+  var cards = document.querySelectorAll('.media-card');
+  if (!filters.length) return;
+
+  filters.forEach(function(btn) {
+    btn.addEventListener('click', function() {
+      var filter = this.dataset.filter;
+
+      filters.forEach(function(b) {
+        b.classList.remove('active');
+        b.setAttribute('aria-selected', 'false');
+      });
+      this.classList.add('active');
+      this.setAttribute('aria-selected', 'true');
+
+      cards.forEach(function(card) {
+        if (filter === 'todos' || card.dataset.tipo === filter) {
+          card.style.display = '';
+        } else {
+          card.style.display = 'none';
+        }
+      });
+    });
+  });
+})();
+</script>
+{% endblock %}
