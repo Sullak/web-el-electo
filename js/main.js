@@ -83,7 +83,7 @@ document.addEventListener('DOMContentLoaded', () => {
       msg += `📝 Tipo: ${tipoLabel[tipo] || tipo}`;
       if (tipo === 'dedicatoria' && dedicatoria) msg += `\n✍️ Dedicatoria: "${dedicatoria}"`;
 
-      const WA_NUMBER = '595974202326';
+      const WA_NUMBER = '595974205274';
       const waUrl = `https://wa.me/${WA_NUMBER}?text=${encodeURIComponent(msg)}`;
 
       const formData = new FormData(purchaseForm);
