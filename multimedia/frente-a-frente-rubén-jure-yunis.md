@@ -1,5 +1,5 @@
 ---
-published: true
+published: false
 title: " FRENTE A FRENTE - RUBÉN JURE YUNIS"
 medio: Entrevista con Gustavo Recalde
 tipo: Video (YouTube)
