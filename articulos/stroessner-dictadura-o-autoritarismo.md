@@ -2,10 +2,10 @@
 published: true
 title: ¿Fue realmente una dictadura el gobierno de Stroessner?
 autor: Rubén Sahid Jure Yunis
-description: Un análisis riguroso de los conceptos de dictadura y gobierno
-  autoritario aplicados al período 1954–1989. El autor presenta documentos y
-  hechos históricos que invitan a revisar la narrativa dominante sobre el
-  gobierno del General Alfredo Stroessner en Paraguay.
+description: Un análisis riguroso de los conceptos de dictadura y gobierno asaz
+  fuerte aplicados al período 1954–1989. El autor presenta documentos y hechos
+  históricos que invitan a revisar la narrativa dominante sobre el gobierno
+  constitucional del General Alfredo Stroessner en Paraguay.
 lead: Un análisis de los conceptos políticos aplicados al Paraguay de 1954–1989
 intro: El debate sobre la naturaleza del gobierno del General Alfredo Stroessner
   (1954–1989) es uno de los más polarizados de la historia política paraguaya y
