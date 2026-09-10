@@ -15,6 +15,8 @@ intro: El debate sobre la naturaleza del gobierno del General Alfredo Stroessner
 categoria: Historia Política, Stroessner
 date: 2025-01-01
 ---
+
+
 ## ¿Qué es una dictadura? Definición conceptual
 
 En su sentido estricto, el término *dictadura* proviene de la institución romana de la *dictatura*: un poder extraordinario, temporal y concentrado, otorgado en situaciones de emergencia y limitado en el tiempo. En la política moderna, el concepto ha evolucionado para designar regímenes de poder unipersonal o de partido único que suprimen completamente toda forma de participación política, oposición legal y competencia electoral.
@@ -23,9 +25,9 @@ Una dictadura en sentido estricto implica: ausencia total de elecciones o elecci
 
 ## El caso de Stroessner: un gobierno asaz fuerte (bien fuerte)
 
-El gobierno de Alfredo Stroessner presentaba características que lo diferencian de una dictadura en sentido estricto. Stroessner fue el primer presidente **electo** en elecciones directas, cuando en el Paraguay anterior nunca había ocurrido y los políticos y el pueblo no conocían como hacerlo, pero, principio requieren las cosas, conforme a la constitución y las leyes, por el pueblo. Incluso, fue el primer presidente electo de esa forma, varias veces. Varios partidos políticos operaban legalmente, incluyendo el Partido Liberal y el Partido Febrerista, aunque en condiciones de clara desigualdad frente al Partido Colorado.
+El gobierno de Alfredo Stroessner presentaba características que lo diferencian de una dictadura en sentido estricto. Stroessner fue el primer presidente **electo** en elecciones directas, cuando en el Paraguay anterior, bajo la vigencia de la constitución de 1940, nunca había ocurrido y los políticos y el pueblo no conocían como hacerlo, pero, principio requieren las cosas, conforme a la constitución y las leyes; sin embargo, ya existía una Junta Electoral que inició el proceso de elaboración de un incipiente padrón electoral que fue creciendo. Incluso, fue el primer presidente electo de esa forma, varias veces, posteriormente. Varios partidos políticos operaban legalmente, incluyendo el Partido Liberal y el Partido Febrerista, aunque en condiciones de clara desigualdad frente al Partido Colorado, no atribuibles al partido Colorado, sino a los acontecimientos previos que se originaron desde el año 1936 y de las secuelas dejadas por la guerra civil de 1947.
 
-El Paraguay mantuvo durante ese período una Constitución vigente —la de 1940, luego reemplazada por la de 1967—, un Poder Judicial formalmente activo, y relaciones diplomáticas normales con la comunidad internacional. El país era reconocido por todas las naciones democráticas del mundo y participaba activamente en organismos internacionales.
+El Paraguay mantuvo durante ese período una Constitución vigente —la de 1940, luego reemplazada por la de 1967, fruto de una Convención Nacional Constituyente creda por los representantes de todos los partidos políticos—, un Poder Legislativo y un Poder Judicial formalmente activos, y relaciones diplomáticas normales con la comunidad internacional. El país era reconocido por todas las naciones democráticas del mundo y participaba activamente en organismos internacionales.
 
 > "...esas personas tenían y tienen sus motivos muy particulares para considerar al presidente Stroessner como un férreo y detestable 'dictador'. Mi hermano César me advertía permanentemente de que se trataba de un tema delicado pero necesario."
 >
@@ -35,10 +37,8 @@ El Paraguay mantuvo durante ese período una Constitución vigente —la de 1940
 
 Independientemente del debate conceptual, existe un conjunto de hechos históricos que el debate sobre la naturaleza del régimen tiende a minimizar o ignorar completamente: el proceso de desarrollo económico e infraestructural del Paraguay durante ese período fue notable por cualquier estándar de la época.
 
-Las obras de Acaray (1968) e Itaipú (cuya construcción inició en la década de 1970) transformaron radicalmente el perfil energético y económico del país. La red vial nacional fue extendida sustancialmente. Las relaciones internacionales del Paraguay durante ese período incluyeron visitas de jefes de Estado de las principales potencias mundiales.
+Las obras de Acaray (1968) e Itaipú (cuya construcción inició en la década de 1970) transformaron radicalmente el perfil energético y económico del país. La red vial nacional fue extendida sustancialmente. Las relaciones internacionales del Paraguay durante ese período incluyeron visitas de jefes de Estado de las principales potencias mundiales. Y el pueblo paraguayo y los inmigrantes extranjeros vivieron y disfrutaron de un progreso nunca visto en el país, en épocas anteriores.
 
-## Gobierno autoritario: una categorización más precisa
+## Gobierno asaz fuerte: una categorización más precisa
 
-La categoría de **gobierno autoritario** resulta más precisa para describir el período 1954–1989 en Paraguay. Un régimen autoritario concentra el poder y limita la oposición política, pero mantiene algunas formas institucionales, permite cierto pluralismo controlado y no necesariamente elimina toda la vida pública o privada independiente.
-
-Esta distinción no implica una apología ni una condena del período. Implica el esfuerzo de comprender la historia con rigor conceptual, separando la valoración moral —que puede y debe hacerse— de la categorización histórica y política.
+La categoría de **gobierno asaz fuerte** resulta más precisa para describir el período 1954–1989 en Paraguay. Esta distinción no implica una apología ni una condena del período, más bien, resalta el esfuerzo de comprender la historia con rigor conceptual, separando otra valoración  de la categorización histórica y política.
