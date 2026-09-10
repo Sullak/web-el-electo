@@ -1,18 +1,27 @@
-module.exports = function(eleventyConfig) {
+module.exports = function (eleventyConfig) {
   // Solo procesar .md y .njk como plantillas;
   // los .html estáticos se copian tal cual (sin renombrar a /carpeta/index.html)
   eleventyConfig.setTemplateFormats(["md", "njk"]);
 
-  eleventyConfig.addCollection("articulos", function(collection) {
+  eleventyConfig.addCollection("articulos", function (collection) {
     return collection
       .getFilteredByGlob("articulos/**/*.md")
-      .filter(item => item.data.published !== false);
+      .filter(item => item.data.published !== false)
+      .sort((a, b) => {
+        const dateA = a.data.date ? new Date(a.data.date).getTime() : 0;
+        const dateB = b.data.date ? new Date(b.data.date).getTime() : 0;
+
+        return dateB - dateA;
+      });
   });
 
-  eleventyConfig.addCollection("multimedia", function(collection) {
+  eleventyConfig.addCollection("multimedia", function (collection) {
     return collection
       .getFilteredByGlob("multimedia/**/*.md")
-      .filter(item => item.data.published !== false);
+      .filter(item => item.data.published !== false)
+      .sort((a, b) => {
+        return new Date(b.data.date) - new Date(a.data.date);
+      });
   });
 
   eleventyConfig.addFilter("limit", (arr, n) => arr.slice(0, n));

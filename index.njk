@@ -179,7 +179,7 @@ navSection: inicio
     </p>
     <div class="articles-grid">
 
-      {% for articulo in collections.articulos | reverse | limit(3) %}
+      {% for articulo in collections.articulos | limit(3) %}
       <div class="article-card card-animate">
         <div class="article-card-top">
           <span class="article-tag">{{ articulo.data.categoria }}</span>
